@@ -2,7 +2,22 @@ import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
 import { LoginPage } from './Login.page';
 
-test('renders without error', () => {
+describe('Login Test Page', () => {
+  
   let wrapper = shallow(<LoginPage/>);
-  // console.log(wrapper.debug());
+  test('Renders without error', () => {
+    const form = wrapper.find('#login-form');
+    expect(form.length).toBe(1);
+  });
+
+  test('email input exist', () => {
+    const emailInput = wrapper.find('#email');
+    expect(emailInput.length).toBe(1);
+  })
+
+  test('password input exist', () => {
+    const passwordInput = wrapper.find('#email');
+    expect(passwordInput.length).toBe(1);
+  })
+  
 });
