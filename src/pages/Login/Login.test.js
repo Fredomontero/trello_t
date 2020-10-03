@@ -16,7 +16,7 @@ describe('Login Test Page', () => {
   })
 
   test('password input exist', () => {
-    const passwordInput = wrapper.find('#email');
+    const passwordInput = wrapper.find('#password');
     expect(passwordInput.length).toBe(1);
   })
   
